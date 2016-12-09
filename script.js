@@ -56,6 +56,10 @@
         images.push(xray);
         
         alien.onload = ship.onload = death.onload = xray.onload = itemLoaded;
+        if death.onload {
+            
+            document.location.reload();
+        }
         
         console.log("game running");
     };
@@ -126,7 +130,6 @@
         
         addDeath: function(death) {
             this.deaths.push(death);
-            document.location.reload();
         },
         
         invadersBelow: function(invader) {
