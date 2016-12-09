@@ -34,7 +34,6 @@
         var ctx = document.getElementById(canvasId).getContext("2d");
         this.ctx = ctx;
         ctx.fillStyle = "http://data.whicdn.com/images/66677814/large.gif";
-        ctx.fillRect(0, 0, gameSize.w, gameSize.h);
         
         var alien = new Image();
         this.alien = alien;
