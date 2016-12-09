@@ -156,9 +156,9 @@
             }
             
             if (this.controls.isDown(this.controls.KEYS.LEFT)) {
-                this.position.x -=1;
+                this.position.x -=2;
             } else if (this.controls.isDown(this.controls.KEYS.RIGHT)) {
-                this.position.x += 1;
+                this.position.x += 2;
             }
             
             if (this.fireEnabled && this.controls.isDown(this.controls.KEYS.FIRE)) {
@@ -173,7 +173,7 @@
     
     var Bullet = function(player, vel) {
         this.player = player;
-        this.size = { w: 1, h: 4 };
+        this.size = { w: 1, h: 8 };
         this.position = { x: player.position.x, y: player.position.y - player.size.h };
         this.vel = vel;
     };
