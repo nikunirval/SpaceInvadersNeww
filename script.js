@@ -4,10 +4,16 @@
         
         var canvas = document.createElement("canvas");
         
-        canvas.setAttribute("width", "400px");
-        canvas.setAttribute("height", "600px");
-        canvas.setAttribute("id", canvasId);
-        document.body.appendChild(canvas);
+            
+        function Screen(width, height) {
+	// create canvas and grab 2d context
+	this.canvas = document.createElement("canvas");
+	this.canvas.width = this.width = width;
+	this.canvas.height = this.height = height;
+	this.ctx = this.canvas.getContext("2d");
+	// append canvas to body of document
+	document.body.appendChild(this.canvas);
+};
         
         var gameSize = { w: canvas.width, h: canvas.height };
         this.gameSize = gameSize;
