@@ -3,14 +3,12 @@
         var self = this;        
         
         var canvas = document.createElement("canvas");
-	this.canvas.width = this.width = width;
-	this.canvas.height = this.height = height;
-	this.ctx = this.canvas.getContext("2d");
-	// append canvas to body of document
-	document.body.appendChild(this.canvas);
-};
+        canvas.setAttribute("width", "400px");
+        canvas.setAttribute("height", "600px");
+        canvas.setAttribute("id", canvasId);
+        document.body.appendChild(canvas);
         
-     
+        var gameSize = { w: canvas.width, h: canvas.height };
         this.gameSize = gameSize;
         
         var images = [];
@@ -32,6 +30,10 @@
             requestAnimationFrame(tick);
         };
                 
+        var ctx = document.getElementById(canvasId).getContext("2d");
+        this.ctx = ctx;
+        ctx.fillStyle = "rgb(0, 0, 0)";
+        ctx.fillRect(0, 0, gameSize.w, gameSize.h);
         
         var alien = new Image();
         this.alien = alien;
