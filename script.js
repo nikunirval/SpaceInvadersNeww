@@ -32,9 +32,6 @@
             requestAnimationFrame(tick);
         };
                 
-        var ctx = document.getElementById(canvasId).getContext("2d");
-        this.ctx = ctx;
-        ctx.fillStyle = "http://data.whicdn.com/images/66677814/large.gif";
         
         var alien = new Image();
         this.alien = alien;
