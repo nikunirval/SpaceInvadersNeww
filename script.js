@@ -10,7 +10,7 @@
 	document.body.appendChild(this.canvas);
 };
         
-        var gameSize = { w: canvas.width, h: canvas.height };
+     
         this.gameSize = gameSize;
         
         var images = [];
