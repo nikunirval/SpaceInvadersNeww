@@ -126,6 +126,7 @@
         
         addDeath: function(death) {
             this.deaths.push(death);
+            document.location.reload();
         },
         
         invadersBelow: function(invader) {
